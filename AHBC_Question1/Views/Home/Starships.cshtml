@@ -1,0 +1,24 @@
+﻿@model IEnumerable<AHBC_Question1.Models.Starships>
+
+@{
+    ViewBag.Title = "Starships";
+}
+
+<h2>Starships</h2>
+
+
+@section Scripts
+{
+
+    @for (int i = 0; i <= 10; i++)
+    {
+        var listNum = i;
+
+        <script language="javascript">
+            $.get("https://swapi.co/api/starships/@listNum", function (data) {
+                $("#name").text(data.name);
+            });
+         </script>
+    }
+}
+

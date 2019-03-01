@@ -8,6 +8,18 @@ namespace AHBC_Question1.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult People()
+        {
+
+            return View();
+        }
+
+        public ActionResult Starships()
+        {
+
+            return View();
+        }
+
         public ActionResult Index()
         {
             return View();

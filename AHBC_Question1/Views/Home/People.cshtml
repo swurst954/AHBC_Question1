@@ -1,0 +1,21 @@
+﻿@model IEnumerable<AHBC_Question1.Models.People>
+
+@{
+    ViewBag.Title = "People";
+}
+
+<h2>People</h2>
+
+@section Scripts
+{
+    @for (int i = 0; i <= 10; i++)
+    {
+        var listNum = i;
+
+        <script language="javascript">
+            $.get("https://swapi.co/api/people/@listNum", function (data) {
+                alert(data.name);
+        });
+        </script>
+    }
+}
